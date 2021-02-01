@@ -1,0 +1,44 @@
+.menu-item {
+  .menu-item-block {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    transition: all 1s;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.4);
+
+      img {
+        animation: anim 1s ease;
+      }
+    }
+
+    .title {
+      font-size: 20px;
+      margin-left: 20px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  
+    img {
+      width: 50px;
+      transition: all 0.5s;
+    }
+  }
+}
+
+@keyframes anim{
+  0%{
+    transform: rotate(0);
+  } 
+  33% {
+    transform: rotate(20deg);
+  } 
+  69% { 
+    transform: rotate(-20deg);
+  }
+  100% { 
+    transform: rotate(0);
+  }
+}

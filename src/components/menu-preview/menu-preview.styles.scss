@@ -1,0 +1,49 @@
+.menu-preview.hide {
+  display: none;
+}
+
+.menu-preview.active {
+  position: absolute;
+  animation: showAnim 1s;
+  top: 0;
+  width: 30vw;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.7);
+
+  .menu-preview-title {
+    position: relative;
+    margin: 10px 0;
+    text-align: center;
+
+    h1 {
+      font-size: 40px;
+    }
+  }
+
+  .menu-preview-close {
+    position: absolute;
+    font-size: 50px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: all 0.5s;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .menu-items {
+    margin-top: 50px;
+  }
+}
+
+@keyframes showAnim {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

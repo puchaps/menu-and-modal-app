@@ -1,24 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import './index.style.scss';
 
-function App() {
+import videoBg from './video/video-bg.mp4';
+
+import ContentBlock from './components/content-block/content-block.component';
+import MainContextProvoder from './context/context';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContextProvoder>
+      <video src = {videoBg} autoPlay loop muted controls/>
+      <ContentBlock/>
+    </MainContextProvoder>
   );
 }
 
