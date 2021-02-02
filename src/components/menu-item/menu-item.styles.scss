@@ -42,3 +42,48 @@
     transform: rotate(0);
   }
 }
+
+@media screen and(max-width: 1024px) {
+  .menu-item {
+    .menu-item-block {
+      .title {
+        font-size: 20px;
+        margin-left: 20px;
+      }
+
+      img {
+        width: 40px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .menu-item {
+    .menu-item-block {
+      .title {
+        font-size: 18px;
+        margin-left: 15px;
+      }
+
+      img {
+        width: 40px;
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 425px) {
+  .menu-item {
+    .menu-item-block {
+      .title {
+        font-size: 15px;
+        margin-left: 10px;
+      }
+
+      img {
+        width: 30px;
+      }
+    }
+  }
+}

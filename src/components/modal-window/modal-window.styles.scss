@@ -9,7 +9,6 @@
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   animation: opacityAnim 1.5s ease;
-  animation-duration: 1.5s;
 
   .modal-window-block {
     position: relative;
@@ -53,8 +52,6 @@
   }
 };
 
-
-
 @keyframes opacityAnim {
   from {
     opacity: 0;
@@ -63,10 +60,10 @@
   }
 };
 
-@keyframes opacityAnimOut {
-  from {
-    opacity: 1;
-  } to {
-    opacity: 0;
+@media screen and(max-width: 425px) {
+  .modal-window.active {
+    .modal-window-block {
+      width: 70%;
+    }
   }
-};
+}

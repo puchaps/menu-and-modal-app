@@ -6,20 +6,16 @@ const MainContextProvoder = ({children}) => {
   const[toggleModalWindow, setToggleModalWindow] = useState(false);
   const[toggleMenu, setToggleMenu] = useState(false);
 
-  const handleToggleModal = () => {
-    setToggleModalWindow(!toggleModalWindow);
-  };
-
-  const handleToggleMenu = () => {
-    setToggleMenu(!toggleMenu);
+  const handleToggle = (setToggle, valueToggle) => {
+    setToggle(!valueToggle);
   };
 
   return (
     <MainContext.Provider value = {{
       toggleModalWindow,
-      handleToggleModal,
       toggleMenu,
-      handleToggleMenu
+      handleToggleModal: () => handleToggle(setToggleModalWindow, toggleModalWindow),
+      handleToggleMenu: () => handleToggle(setToggleMenu, toggleMenu)
     }}>
       {children}
     </MainContext.Provider>
