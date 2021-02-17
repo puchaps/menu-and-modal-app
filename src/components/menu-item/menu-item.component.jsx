@@ -1,14 +1,14 @@
-import './menu-item.styles.scss';
+import React from "react";
 
-const MenuItem = ({ title, urlImg }) => {
-  return (
-    <div className="menu-item">
-      <div className="menu-item-block">
-        <img src = {urlImg}/>
-        <span className="title">{title}</span>
-      </div>
+import "./menu-item.styles.scss";
+
+const MenuItem = ({ onTitle, onUrlImg }) => (
+  <div className="menu-item">
+    <div className="menu-item-block">
+      <img src={onUrlImg} alt="menu" />
+      <span className="title">{onTitle}</span>
     </div>
-  );
-};
+  </div>
+);
 
 export default MenuItem;

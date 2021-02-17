@@ -1,15 +1,15 @@
-import './content-block.styles.scss';
+import React from "react";
 
-import ContentModal from '../content-modal/context-modal.component';
-import ContentMenu from '../content-menu/content-menu.component';
+import "./content-block.styles.scss";
 
-const ContentBlock = () => {
-  return (
-    <div className="content-block">
-      <ContentModal/>
-      <ContentMenu/>
-    </div>
-  );
-};
+import ContentModal from "../content-modal/context-modal.component";
+import ContentMenu from "../content-menu/content-menu.component";
+
+const ContentBlock = () => (
+  <div className="content-block">
+    <ContentModal />
+    <ContentMenu />
+  </div>
+);
 
 export default ContentBlock;

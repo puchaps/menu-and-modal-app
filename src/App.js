@@ -1,16 +1,16 @@
-import './index.style.scss';
+import React from "react";
 
-import ContentBlock from './components/content-block/content-block.component';
-import MainContextProvoder from './context/context';
-import VidepBg from './components/video-bg/video-bg.component';
+import "./index.style.scss";
 
-const App = () => {
-  return (
-    <MainContextProvoder>
-      <VidepBg/>
-      <ContentBlock/>
-    </MainContextProvoder>
-  );
-}
+import ContentBlock from "./components/content-block/content-block.component";
+import MainContextProvider from "./context/context";
+import VideoBg from "./components/video-bg/video-bg.component";
+
+const App = () => (
+  <MainContextProvider>
+    <VideoBg />
+    <ContentBlock />
+  </MainContextProvider>
+);
 
 export default App;

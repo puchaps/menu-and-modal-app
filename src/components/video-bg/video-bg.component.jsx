@@ -1,9 +1,9 @@
-import './video-bg.styles.scss';
+import React from "react";
 
-import videoBg from '../../video/video-bg.mp4';
+import "./video-bg.styles.scss";
 
-const VidepBg = () => {
-  return <video src = {videoBg} autoPlay loop muted controls/>
-};
+import videoBg from "../../video/video-bg.mp4";
 
-export default VidepBg;
+const VideoBg = () => <video src={videoBg} autoPlay loop muted controls />;
+
+export default VideoBg;
